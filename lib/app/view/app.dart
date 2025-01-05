@@ -1,4 +1,4 @@
-import 'package:anamnesis_app/anamnesis/view/anamnesis_page.dart';
+import 'package:anamnesis_app/anamnesis/anamnesis.dart';
 import 'package:anamnesis_app/common/theme.dart';
 import 'package:anamnesis_app/l10n/l10n.dart';
 import 'package:flutter/material.dart';
@@ -9,15 +9,17 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context);
+
     return ScreenUtilInit(
       minTextAdapt: true,
-      child: MaterialApp(
-        localizationsDelegates: AppLocalizations.localizationsDelegates,
-        builder: (context, child) {
-          ScreenUtil.init(context);
-          return Theme(data: AppTheme().light, child: const AnamnesisPage());
-        },
-      ),
+      builder: (context, child) {
+        return MaterialApp(
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          theme: AppTheme().light,
+          home: const AnamnesisPage(),
+        );
+      },
     );
   }
 }
