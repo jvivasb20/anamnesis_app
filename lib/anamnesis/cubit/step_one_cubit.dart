@@ -21,7 +21,21 @@ class AnamnesisStepOneCubit extends Cubit<List<AnamnesisQuestion>> {
   }
 
   bool get allQuestionsAnswered {
-    return state.every((question) => !question.isRequired || question.answer != null);
+    return state.every((question) {
+      if (!question.isRequired) {
+        return true;
+      }
+      if (question.answer == null) {
+        return false;
+      }
+
+      if (question.answer is String) {
+        final answer = (question.answer as String).trim();
+        return answer.isNotEmpty;
+      }
+
+      return question.answer != null;
+    });
   }
 
   TextEditingController getController(int index) {

@@ -1,9 +1,9 @@
-import 'package:anamnesis_app/anamnesis/model/anamnesis_model.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:anamnesis_app/anamnesis/cubit/step_one_cubit.dart';
+import 'package:anamnesis_app/anamnesis/model/anamnesis_model.dart';
 import 'package:anamnesis_app/common/theme.dart';
 import 'package:anamnesis_app/common/widgets/buttons.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AnamnesisStepOnePage extends StatelessWidget {
   const AnamnesisStepOnePage(this.navigation, {super.key});
@@ -119,13 +119,10 @@ class AnamnesisStepOnePage extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: PrimaryButton(
-              'Siguiente',
-              isEnabled: cubit.allQuestionsAnswered,
-              onPressed: navigation.onNext,
-            ),
+          PrimaryButton(
+            'Siguiente',
+            isEnabled: cubit.allQuestionsAnswered,
+            onPressed: navigation.onNext,
           ),
         ],
       ),
