@@ -33,7 +33,7 @@ class AnamnesisPage extends StatelessWidget {
               return AnamnesisStepTwoPage(
                 AnamnesisNavigation(
                   onPrevious: cubit.previousStep,
-                  onNext: cubit.onStepCompleted,
+                  onNext: () => cubit.onStepCompleted(context),
                 ),
               );
             default:

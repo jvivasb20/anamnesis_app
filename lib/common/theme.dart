@@ -47,11 +47,8 @@ class AppColors {
   static const Color secondary = Color(0xFFEDC603);
   static const Color background = Color(0XFF04070D);
   static const Color accent = Color(0xFFFF19A3);
-
   static const Color hint = Color(0xFFC0C5E0);
-
   static const Color inputBorder = Color(0xFF343642);
-
   static const Color selected = Color(0xFF141728);
   static const Color selectedBorder = Color(0xFF038BED);
 }
