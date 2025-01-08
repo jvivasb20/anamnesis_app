@@ -1,7 +1,3 @@
-Aquí tienes el archivo `README.md` ajustado con la estructura de tu carpeta:
-
----
-
 # Anamnesis App
 
 Aplicación desarrollada en Flutter para implementar pantallas de anamnesis (recolección de datos médicos). El diseño, colores y campos siguen el prototipo proporcionado.
